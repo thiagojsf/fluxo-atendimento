@@ -6,14 +6,16 @@ import { CadastroClienteComponent } from './cliente/cadastro-cliente/cadastro-cl
 import { ClienteService } from './cliente.service';
 import { TipoPessoaComponent } from './cliente/tipo-pessoa/tipo-pessoa.component';
 import { TipoClienteComponent } from './cliente/tipo-cliente/tipo-cliente.component';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { LxTextoComponent } from './lx-texto/lx-texto.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     CadastroClienteComponent,
     TipoPessoaComponent,
-    TipoClienteComponent
+    TipoClienteComponent,
+    LxTextoComponent
   ],
   imports: [
     BrowserModule,
