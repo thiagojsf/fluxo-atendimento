@@ -9,7 +9,7 @@ export class ClienteService {
   constructor(private http: HttpClient) { }
 
   getClientes() {
-    this.http.get('https://treinamento-505d8.firebaseio.com/lista.json');
+    return this.http.get('https://treinamento-505d8.firebaseio.com/lista.json');
   }
 
 }

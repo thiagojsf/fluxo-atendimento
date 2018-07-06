@@ -18,27 +18,15 @@ export class CadastroClienteComponent implements OnInit {
   constructor(private svcCliente: ClienteService) { }
 
   ngOnInit() {
-    let self = this;
-
-    setTimeout(() => {
-      self.cliente = "Proprietário iniciando..."; 
-      self.imagem = "assets/neymar_em_pe.jpg";
-    }, 1000);
-
-
-    let interval = setInterval(() => {
-      self.cliente = "Proprietário " + self.contador++; 
-      if (self.contador == 5){
-        clearInterval(interval);
-        self.imagem = "assets/neymar_no_chao.jpg";
-      }
-    }, 2000);
 
     if (this.pessoa == null) {
       this.pessoa = new Pessoa();
       this.pessoa.nomePessoa = "Beneton";
       this.pessoa.tipoPessoa = TipoPessoa.Juridica;
     }
+
+    this.svcCliente.getClientes();
+
   }
 
   levantarNeymar() : void {
